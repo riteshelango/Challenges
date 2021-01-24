@@ -2,7 +2,7 @@
 
 function ageInDays() {
     var birthYear = prompt('What year were you born... Good friend?');
-    var ageInDayss = (2020 - birthYear) * 365; // Ever year you will have to change the 2020
+    var ageInDayss = (2021 - birthYear) * 365; // Ever year you will have to change the 2020
     var h1 = document.createElement('h1');
     var textAnswer = document.createTextNode('You are ' + ageInDayss + ' days old.')
     h1.setAttribute('id', 'ageInDays');
@@ -185,7 +185,7 @@ let blackjackGame = {
 function showCard(card, activePlayer) {  
     if (activePlayer['score'] <= 21) {
        let cardImage = document.createElement('img');
-       cardImage.src = `./images/${card}.jpg`;
+       cardImage.src = `./images/${card}.png`;
        document.querySelector(activePlayer['div']).appendChild(cardImage);
        hitSound.play();
  } 
@@ -251,5 +251,5 @@ function dealerLogic() {
     let card = randomCard();
     showCard(card, DEALER)
     updateScore(card, DEALER);
-    showScore(DEALER);
+    showScore(DEALER); 
 }
